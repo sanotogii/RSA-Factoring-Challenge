@@ -7,7 +7,8 @@ def factored_number(file):
     with open(file, 'r') as file:
         for line in file:
             f_array.append(int(line.strip()))
-	return f_array
+    return f_array
+
 
 def factorize(integer):
     factor = []
@@ -15,6 +16,7 @@ def factorize(integer):
         if integer % i == 0:
             return i, integer // i
     return None, None
+
 
 if __name__ == "__main__":
     if len(argv) != 2:
@@ -27,4 +29,4 @@ arr = factored_number(file_name)
 for i in arr:
     a, b = factorize(i)
     if a is not None:
-        print("{}={}*{}".format(i,b ,a))
+        print("{}={}*{}".format(i, b, a))
