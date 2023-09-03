@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+from sys import argv
+
+
+def factored_number(file):
+    f_array = []
+    with open(file, 'r') as file:
+        for line in file:
+            f_array.append(int(line.strip()))
+	return f_array
+
+def factorize(integer):
+    factor = []
+    for i in range(2, integer):
+        if integer % i == 0:
+            return i, integer // i
+    return None, None
+
+if __name__ == "__main__":
+    if len(argv) != 2:
+        print("Usage: ./script_name.py <input_file>")
+        exit(1)
+
+
+file_name = argv[1]
+arr = factored_number(file_name)
+for i in arr:
+    a, b = factorize(i)
+    if a is not None:
+        print("{}={}*{}".format(i,b ,a))
