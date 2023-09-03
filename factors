@@ -32,3 +32,4 @@ for i in arr:
     a, b = factorize(i)
     if a is not None:
         print("{}={}*{}".format(i, b, a))
+print()
