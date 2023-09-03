@@ -22,7 +22,6 @@ def factorize(integer):
 
 
 if __name__ == "__main__":
-    """checker"""
     if len(argv) != 2:
         exit(1)
 
