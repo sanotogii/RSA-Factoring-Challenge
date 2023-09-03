@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """Factorize all the things!"""
+
 from sys import argv
 
 
 def factored_number(file):
     """read the int from the file"""
+
     f_array = []
     with open(file, 'r') as file:
         for line in file:
@@ -14,6 +16,7 @@ def factored_number(file):
 
 def factorize(integer):
     """factorize the integer"""
+
     factor = []
     for i in range(2, integer):
         if integer % i == 0:
@@ -32,4 +35,3 @@ for i in arr:
     a, b = factorize(i)
     if a is not None:
         print("{}={}*{}".format(i, b, a))
-print()
